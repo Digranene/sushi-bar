@@ -2,6 +2,7 @@ import Paper from "@material-ui/core/Paper";
 import {Button, Container, Grid, Typography} from "@material-ui/core";
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
+import banner from "../img/christian-allard-etIkw39orF8-unsplash.jpg"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,16 +26,16 @@ const useStyles = makeStyles((theme) => ({
     mainFeaturesPostContent: {
         position: "relative",
         padding: theme.spacing(6),
-        marginTop: theme.spacing(8)
+        marginTop: theme.spacing(66)
     },
 }))
 
 
-export const Baner = () => {
+export const Banner = () => {
     const classes = useStyles()
 
     return <Paper className={classes.mainFeaturesPost}
-                  style={{backgroundImage: `url(src/img/christian-allard-etIkw39orF8-unsplash.jpg)`}}>
+                  style={{backgroundImage: `url(${banner})`}}>
         <Container maxWidth={"lg"}>
             <div className={classes.overlay}/>
             <Grid container>
@@ -45,7 +46,7 @@ export const Baner = () => {
                             variant="h3"
                             color="inherit"
                             gutterBottom>
-                            Web Dev
+                            New Menu
                         </Typography>
                         <Typography
                             component="h5"

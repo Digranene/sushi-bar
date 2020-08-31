@@ -11,7 +11,11 @@ export const Slogan = () => {
    return <div className={classes.mainContent}>
         <Container maxWidth="sm">
             <Typography variant="h2" align="center" color="textPrimary"
-                        gutterBottom>Web Dev</Typography>
+                        gutterBottom>
+                Need Work ?
+                Join Us!
+            </Typography>
+
             <Typography variant="h5" align="center" color="textSecondary"
                         paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis delectus doloremque

@@ -8,8 +8,13 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1
+        flexGrow: 1,
+        marginTop: "50px",
     },
+    footerBlock: {
+        marginTop: "50px",
+        marginBottom: "50px"
+    }
 }))
 
 export const Footer = () => {
@@ -21,8 +26,8 @@ export const Footer = () => {
         setValue(newValue)
     }
 
-    return <footer>
-        <Typography variant="h6" align="center" gutterBottom>Footer</Typography>
+    return <footer className={classes.footerBlock}>
+        <Typography variant="h6" align="center" gutterBottom>Contact Us</Typography>
         <BottomNavigation value={value} onChange={handleChange}
                           className={classes.root}>
             <BottomNavigationAction

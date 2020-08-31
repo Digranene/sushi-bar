@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import {Appbar} from "./components/AppBar";
-import {Baner} from "./components/Baner";
+import {Banner} from "./components/Banner";
 import {Slogan} from "./components/Slogan";
 import {Cards} from "./components/Cards";
 import {Footer} from "./components/Footer";
+import {Delivery} from "./components/Delivery";
 
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
         <>
             <Appbar/>
             <main>
-                <Baner/>
+                <Banner/>
                 <Slogan/>
                 <Cards/>
+                <Delivery/>
             </main>
             <Footer/>
         </>

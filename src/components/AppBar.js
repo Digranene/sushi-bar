@@ -40,7 +40,7 @@ export const Appbar = () => {
                             color="inherit" aria-label="menu">
                     <MenuIcon/>
                 </IconButton>
-                <Typography variant="h6" className={classes.title}>Web Dev</Typography>
+                <Typography variant="h6" className={classes.title}>Sushi House</Typography>
                 <Box mr={3}>
                     <Button color="inherit" variant="outlined"
                             onClick={handleClickOpen}>
