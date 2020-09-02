@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         marginTop: "50px",
+        marginBottom: "50px"
     },
     footerBlock: {
         marginTop: "50px",
