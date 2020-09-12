@@ -1,6 +1,5 @@
 import AppBar from "@material-ui/core/AppBar";
 import {Box, Button, Container, DialogContentText, IconButton, Toolbar, Typography} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -38,9 +37,8 @@ export const Appbar = () => {
             <Toolbar>
                 <IconButton edge="start" className={classes.menuButton}
                             color="inherit" aria-label="menu">
-                    <MenuIcon/>
                 </IconButton>
-                <Typography variant="h6" className={classes.title}>Sushi House</Typography>
+                <Typography variant="h5" className={classes.title}>Sushi House</Typography>
                 <Box mr={3}>
                     <Button color="inherit" variant="outlined"
                             onClick={handleClickOpen}>

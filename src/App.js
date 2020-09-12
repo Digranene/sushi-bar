@@ -8,18 +8,20 @@ import {Footer} from "./components/Footer";
 import {Delivery} from "./components/Delivery";
 
 
+
+
 function App() {
     return (
-        <>
-            <Appbar/>
+        <div>
+            {/*<Appbar/>*/}
             <main>
                 <Banner/>
                 <Slogan/>
-                <Cards/>
+                <Cards />
                 <Delivery/>
             </main>
             <Footer/>
-        </>
+        </div>
     );
 }
 

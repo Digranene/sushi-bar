@@ -3,12 +3,15 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-
-    }))
+    mainContent: {
+        marginBottom: theme.spacing(10),
+        marginTop: theme.spacing(10),
+    }
+}))
 export const Slogan = () => {
     const classes = useStyles()
 
-   return <div className={classes.mainContent}>
+    return <div className={classes.mainContent}>
         <Container maxWidth="sm">
             <Typography variant="h2" align="center" color="textPrimary"
                         gutterBottom>

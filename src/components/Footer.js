@@ -8,6 +8,10 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        backgroundColor: "transparent",
+        border: "none",
+        height: "100px",
+        opacity: "0.5",
         flexGrow: 1,
         marginTop: "50px",
         marginBottom: "50px"
@@ -29,7 +33,7 @@ export const Footer = () => {
 
     return <footer className={classes.footerBlock}>
         <Typography variant="h6" align="center" gutterBottom>Contact Us</Typography>
-        <BottomNavigation value={value} onChange={handleChange}
+        <BottomNavigation  value={value} onChange={handleChange}
                           className={classes.root}>
             <BottomNavigationAction
                 label="Recents"
