@@ -8,17 +8,28 @@ import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: "transparent",
         border: "none",
         height: "100px",
-        opacity: "0.5",
         flexGrow: 1,
         marginTop: "50px",
-        marginBottom: "50px"
+        marginBottom: "50px",
+        position: "relative",
+        zIndex: "-1",
     },
     footerBlock: {
         marginTop: "50px",
         marginBottom: "50px"
+    },
+    mainContent: {
+        opacity: "0.5",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "transparent",
+        position: "absolute",
+        left: "0",
+        right: "0",
+        top: "0",
+        bottom: "0",
     }
 }))
 
@@ -32,7 +43,10 @@ export const Footer = () => {
     }
 
     return <footer className={classes.footerBlock}>
-        <Typography variant="h6" align="center" gutterBottom>Contact Us</Typography>
+        <div className={classes.mainContent}>
+
+        </div>
+        <Typography color="primary" variant="h6" align="center" gutterBottom>Contact Us</Typography>
         <BottomNavigation  value={value} onChange={handleChange}
                           className={classes.root}>
             <BottomNavigationAction

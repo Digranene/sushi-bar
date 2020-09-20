@@ -11,22 +11,29 @@ import NT from "../img/sushi/xAVlNXgudEThASzJj1XrsSyRYAgL07s04vBRrS0C.png";
 import NK from "../img/sushi/Nw9xYf8344k7xb5amerspx7n8GzX6dqvJv0Yc6z8.png";
 import BoP from "../img/sushi/JJgtW0mUZ1EwPYALUP3xtm9hontp4WYcAJOUvl8a.png";
 import BoS from "../img/sushi/3mYGu924obMceqFgejpyUpgYZWlbz6KlcLhh1d6v.png";
+    import BG from "../img/background/rabie-madaci-7y_cYkYhDoM-unsplash.jpg"
 import {makeStyles} from "@material-ui/core/styles";
+import {NavLink} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     cardMedia: {
-        paddingTop: "56.25%"
+        paddingTop: "70%"
     },
     cardContent: {
         flexGrow: 1,
     },
     cardGrid: {
+        backgroundImage: "BG",
+        backgroundSize: "cover",
         marginTop: theme.spacing(10),
         marginBottom: theme.spacing(12)
+    },
+    card: {
+        backgroundColor: "gray",
     }
 }))
 
-const sushi = [
+export const sushi = [
     {id: 1, name: "Breath of Dragon", weight: "200gm", price: "12$", img: BoD},
     {id: 2, name: "Maki ekki", weight: "220gm", price: "14$", img: Me},
     {id: 3, name: "Futomak of Tuna", weight: "210gm", price: "12$", img: FoT},
@@ -35,11 +42,12 @@ const sushi = [
     {id: 6, name: "Nigiri Tekka", weight: "220gm", price: "14$", img: NT},
     {id: 7, name: "Nigiri Kunsei", weight: "200gm", price: "16$", img: NK},
     {id: 8, name: "Boguki of Pee", weight: "250gm", price: "10$", img: BoP},
-    {id: 8, name: "Boguki of See", weight: "220gm", price: "11$", img: BoS},
+    {id: 9, name: "Boguki of See", weight: "220gm", price: "11$", img: BoS},
 ]
 
 export const Sushi = () => {
     const classes = useStyles()
+
 
     return <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
@@ -52,18 +60,21 @@ export const Sushi = () => {
                         />
                         <CardContent className={classes.cardContent}>
                             <Typography variant="h5" gutterBottom>
-                                Blog Post
+                                {card.name}
                             </Typography>
                             <Typography>
                                 Description text Description text Description text
                                 Description text Description text
                             </Typography>
-                            <Typography>weight</Typography>
+                            <Typography>{card.weight}</Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" color="primary">
-                                View
-                            </Button>
+                            <NavLink to={`/popup/${card.id}`}>
+                                <Button
+                                    size="small" color="primary">
+                                    View
+                                </Button>
+                            </NavLink>
                             <Button size="small" color="primary">
                                 Buy
                             </Button>

@@ -9,7 +9,8 @@ import SoO from "../img/setSushi/MPloVUVpLleoYRczC7NzVZ7rgU8YJnWh5k3hNnRJ.png";
 import SoG from "../img/setSushi/s3tXjkMwCjmNWXZhpSTFCoeoHRQUX3nLwBMTafB0.png";
 import SoH from "../img/setSushi/fviNUbPOgmCPB9dpaQHrX5b8NM48GcwdBp6V94Tr.png";
 import {makeStyles} from "@material-ui/core/styles";
-
+import {NavLink} from "react-router-dom";
+import {v1} from "uuid";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,16 +23,19 @@ const useStyles = makeStyles((theme) => ({
     cardGrid: {
         marginTop: theme.spacing(12),
         marginBottom: theme.spacing(12)
+    },
+    card: {
+        backgroundColor: "gray",
     }
 }))
 
-const sushiSet = [
-    {id: 1, name: "Set of Tanuki", weight: "440gm", price: "20$", img: SoT},
-    {id: 1, name: "Set of Syake", weight: "550gm", price: "22$", img: SoS},
-    {id: 1, name: "Set of Filoman", weight: "600gm", price: "28$", img: SoF},
-    {id: 1, name: "Set of Origami", weight: "800gm", price: "25$", img: SoO},
-    {id: 1, name: "Set of Gunkami", weight: "1000gm", price: "29$", img: SoG},
-    {id: 1, name: "Set of Hurakami", weight: "1100gm", price: "31$", img: SoH},
+export const sushiSet = [
+    {id: 11, name: "Set of Tanuki", weight: "440gm", price: "20$", img: SoT},
+    {id: 12, name: "Set of Syake", weight: "550gm", price: "22$", img: SoS},
+    {id: 13, name: "Set of Filoman", weight: "600gm", price: "28$", img: SoF},
+    {id: 14, name: "Set of Origami", weight: "800gm", price: "25$", img: SoO},
+    {id: 15, name: "Set of Gunkami", weight: "1000gm", price: "29$", img: SoG},
+    {id: 16, name: "Set of Hurakami", weight: "1100gm", price: "31$", img: SoH},
 ]
 
 export const Sushiset = () => {
@@ -48,18 +52,20 @@ export const Sushiset = () => {
                         />
                         <CardContent className={classes.cardContent}>
                             <Typography variant="h5" gutterBottom>
-                                Blog Post
+                                {card.name}
                             </Typography>
                             <Typography>
                                 Description text Description text Description text
                                 Description text Description text
                             </Typography>
-                            <Typography>weight</Typography>
+                            <Typography>{card.weight}</Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" color="primary">
-                                View
-                            </Button>
+                            <NavLink to={`/popup/set/${card.id}`}>
+                                <Button size="small" color="primary">
+                                    View111
+                                </Button>
+                            </NavLink>
                             <Button size="small" color="primary">
                                 Buy
                             </Button>
